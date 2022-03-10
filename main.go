@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	var B []int = []int{1, 1, 3, 9, 3, 9, 7, 9, 9, 3, 3, 3, 3, 3, 3, 3, 3}
+	var B []int = []int{1, 1, 3, 9, 3, 9, 9, 9, 3, 3, 3, 3, 3, 3, 3, 3, 3}
 
 	fmt.Println(Solution(B))
 
@@ -25,9 +25,10 @@ func Solution(A []int) int {
 		arr[i] = z
 	}
 	for y, x := range arr {
-		if x == 1 {
+		if x%2 == 1 {
 			res = A[y]
 		}
+		fmt.Println(y, " ", x)
 	}
 	return res
 
